@@ -17,7 +17,7 @@ provider "aws" {
 resource "aws_instance" "group39" {
   ami = "ami-024e6efaf93d85776"
   instance_type = "t2.medium"
-  key_name = "farmore"
+  key_name = "xxxxxxxx"
 
   tags = {
     Name = "Group39"
