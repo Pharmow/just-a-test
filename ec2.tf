@@ -20,7 +20,7 @@ resource "aws_instance" "group39" {
   key_name = "xxxxxxxx"
 
   tags = {
-    Name = "Group39"
+    Name = "xxxxxx"
   }
   
 }
