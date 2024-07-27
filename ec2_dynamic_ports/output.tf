@@ -17,3 +17,8 @@ output "monitoring" {
   description = "Monitoring"
   value       = aws_instance.ec2_demo.monitoring
 }
+
+output "arn" {
+  description = "arn"
+  value       = aws_instance.ec2_demo.monitoring
+}
