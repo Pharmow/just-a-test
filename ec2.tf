@@ -19,6 +19,14 @@ resource "aws_instance" "group39" {
   instance_type = "t2.medium"
   key_name = "xxxxxxxx"
 
+  root_block_device {
+    encrypted = true
+  }
+
+  metadata_options {
+     http_tokens = "required"
+     }
+
   tags = {
     Name = "xxxxxx"
   }
