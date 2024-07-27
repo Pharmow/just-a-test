@@ -1,7 +1,7 @@
 # The default provider configuration; resources that begin with `aws_` will use
 # it as the default, and it can be referenced as `aws`.
 provider "aws" {
-  region = "us-east-2" 
+  region = "us-east-2"
 }
 
 
@@ -15,20 +15,22 @@ provider "aws" {
 # }
 
 resource "aws_instance" "group39" {
-  ami = "ami-024e6efaf93d85776"
+  ami           = "ami-024e6efaf93d85776"
   instance_type = "t2.medium"
-  key_name = "xxxxxxxx"
+  key_name      = "xxxxxxxx"
+
+  user_data = file("${path.module}/user-data.sh")
 
   root_block_device {
     encrypted = true
   }
 
   metadata_options {
-     http_tokens = "required"
-     }
+    http_tokens = "required"
+  }
 
   tags = {
     Name = "xxxxxx"
   }
-  
+
 }
